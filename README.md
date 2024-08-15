@@ -1,45 +1,10 @@
-# -Synthesizing-DNA-sequences-with-LLM-
+Introduction
+Synthesizing-DNA-sequences-with-LLM is a pioneering project that uses large language models (LLMs) to synthesize and generate DNA sequences. By applying advanced NLP techniques to the realm of genomics, this project enables the creation of novel DNA sequences based on specific parameters or existing genomic data. It is designed for researchers and bioinformaticians interested in exploring genetic code generation, sequence optimization, and synthetic biology applications.
 
-
-This project is not focused on genome data alone. The purpose is to design a generic solution that may also work
-in other contexts, such as synthesizing molecules. The problem involves dealing with a large amount of “text”.
-Indeed, the sequences discussed here consist of letter arrangements, from an alphabet that has 5 symbols: A,
-C, G, T and N. The first four symbols stand for the types of bases found in a DNA molecule: adenine (A),
-cytosine (C), guanine (G), and thymine (T). The last one (N) represents missing data. No prior knowledge of
-genome sequencing is required.
-The data consists of DNA sub-sequences from a number of individuals, and categorized according to the
-type of genetic patterns found in each sequence. Here I combined the sequences together. The goal is to
-synthesize realistic DNA sequences, evaluate the quality of the synthetizations, and compare the results with
-random sequences. The idea is to look at a DNA string S1 consisting of n1 consecutive symbols, to identify
-potential candidates for the next string S2 consisting of n2 symbols. Then, assign a probability to each string
-S2 conditionally on S1, use these transition probabilities to sample S2 given S1, then move to the right by n2
-symbols, do it again, and so on. Eventually you build a synthetic sequence of arbitrary length. There is some
-analogy to Markov chains. Here, n1 and n2 are fixed, but arbitrary.
-
-
-Let’s look at 3 different DNA sequences. The first one is from a real human being. The second one is synthetic,
-replicating some of the patterns found in real data. The third one is purely random, with each letter indepently 
-
-
-Real DNA
-ATGCCCCAACTAAATACTACCGTATGGCCCACCATAATTACCCCCATACTCCTTACACTATTCCTCATCACCCAACTA
-AAAATATTAAACACAAACTACCACCTACCTCCCTCACCAAAGCCCATAAAAATAAAAAATTATAACAAACCCTGAGAA
-CCAAAATGAACGAAAATCTGTTCGCTTCATTCATTGCCCCCACAATCCTAGNATGAACGAAAATCTGTTCGCTTCATT
-CATTGCCCCCACAATCCTAGGCCTACCCGCCGCAGTACTGATCATTCTATTTCCCCCTCTATTGATCCCCACCTCCAA
-ATATCTCATCAACAACCGACTAATCACCACCCAACAATGACTAATCAAACTAACCTCAAAACAAATGATAACCATACA
-
-Synthetic DNA
-TTGTTTTCTTCACCTAAATGCACAAGAATGGTGGGCCGAGGAGCCATGTCAAGTGGGGATGGGTCTATCGAACCTGAG
-GGCCCCCCACTTCAGATGCTTCGTACTGTCTTTGGGACTTCTCACCGTCTCATGGTCTGCCCTGCCCCGCAGTGTGGC
-CTGGTATTTTTAACCCTATTATAGAAACAACAATTTATGGGCTCCTTGAAGCTTATACAATACAACAGTAAAGGGCCC
-CTCCTCCAGTCAGCCTCTTTCCCTCTTAGGGTAAATGAGGATATCCAAGTGCCCACCTCATCATCAACTCCGCCACCA
-GTTTGCAGCCCTTGCAGGAGATTTCTGGTGATGAAAGTTCAGTGGACTTGGGAAAAGCCGTCATGCTGTCTGCCAACC
-
-Random DNA
-ATCCTGCTTCATATGTAGGAAGGGTTGTAGGTTCCCGGAGGGCGCATTGCAAAGACCGGCCAGACTACTTATGGCCGC
-GTCCTAAGCACCATATGCTAAGCCTGATTAACATCGCGCGGATGTAACTACACGCGCGCTACGTGAATCCTAGGCAGC
-CGTCACGATTGACTCCTCATACTCATCGAGGCGCTCGCGTCATAGACCGACCATCGCGTCACCATAATAAGTAGAGTC
-TTTACGGTAGGCCTTCAAAATACGGACAAGGCATTTGTATTCTTCATGTCATGTAGCTGAAGAATACCATTAAGTTTA
-TAGGCGGGTGTACGACAAGACTGCCAGGTGGCAGTGTCGTCACAAGAGCGCGTAAACTTTTTGCCGGTAATAGACCGT
-
-
+Features
+DNA Sequence Generation: Leverages LLMs to generate new DNA sequences with desired properties or functional characteristics.
+Customizable Parameters: Allows users to specify constraints and features for generated sequences, such as specific motifs or structural elements.
+Integration with Genomic Data: Capable of incorporating existing genomic data to guide and enhance the synthesis process.
+Performance Metrics: Provides tools to evaluate the quality and viability of generated sequences, ensuring they meet the required standards.
+User-Friendly Interface: Simplified API for generating and analyzing DNA sequences, making advanced genetic synthesis accessible to a broader audience.
+Extensive Documentation: Includes detailed instructions and examples for setting up, using, and customizing the sequence generation process.
