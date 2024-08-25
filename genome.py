@@ -100,8 +100,8 @@ print()
 #
 # synthesizing word2, one at a time, sequencially based on previous word1
 
-n_synthetic_string2 = 2000000
-seed = 65
+n_synthetic_string2 = 20000000
+seed = 42
 np.random.seed(seed)
 
 synthetic_sequence = 'TTGT'    # starting point (must be existing string1)
@@ -137,7 +137,7 @@ for k in range(n_synthetic_string2):
         cdf += arr_proba[j]
     synthetic_string2 = arr_string2[j]
     synthetic_sequence += synthetic_string2
-    if k % 100000 == 0:
+    if k % 1000000 == 0:
         print("Synthesizing %7d/%7d: %4d %8.5f %2s" 
                   % (k, n_synthetic_string2, j, u, synthetic_string2))
 
@@ -145,9 +145,9 @@ for k in range(n_synthetic_string2):
     pos1 += string2_length
 
 print()
-print("Real DNA:\n", sequence[0:1000])
+print("Real DNA:\n", sequence[0:10000])
 print()
-print("Synthetic DNA:\n", synthetic_sequence[0:1000])
+print("Synthetic DNA:\n", synthetic_sequence[0:10000])
 print()
 
 
@@ -160,7 +160,7 @@ map = ['A', 'C', 'T', 'G']
 
 for k in range(length):
     random_sequence += map[np.random.randint(4)]
-    if k % 100000 == 0:
+    if k % 1000000 == 0:
         print("Creating random sequence: %7d/%7d" %(k,length))
 print()
 print("Random DNA:\n", random_sequence[0:1000])
@@ -169,7 +169,7 @@ print()
 
 #--- [6] Evaluate quality: real vs synthetic vs random DNA
 
-max_nodes = 10000  # sample strings for frequency comparison
+max_nodes = 100000  # sample strings for frequency comparison
 string_length = 6  # length of sample strings (fixed length here)
 
 nodes = 0
@@ -183,7 +183,7 @@ while nodes < max_nodes and iter < 5*max_nodes:
     if string not in hnodes and 'N' not in string:
         hnodes[string] = True
         nodes += 1
-        if nodes % 1000 == 0:
+        if nodes % 10000 == 0:
             print("Building nodes: %6d/%6d" %(nodes, max_nodes))
 print()
 
