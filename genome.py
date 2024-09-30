@@ -1,5 +1,3 @@
-# genome.py : synthesizing DNA sequences
-# data: https://www.kaggle.com/code/tarunsolanki/classifying-dna-sequence-using-ml
 
 import pandas as pd
 import numpy as np
